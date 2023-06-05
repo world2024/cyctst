@@ -4,7 +4,7 @@
   command = "npm run build"
   publish = "build"
 
-functions:
+[[functions]]
   index:
     handler: index.handler
     memory: 1024
