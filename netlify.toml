@@ -1,20 +1,16 @@
-# YOUR_BASE_DIRECTORY/netlify.toml
-
 [build]
   command = "npm run build"
   publish = "build"
 
 [[functions]]
-  index:
-    handler: index.handler
-    memory: 1024
-    timeout: 10
-    environment:
-    NODE_ENV: "production"
-
-
-
+  name = "index"
+  path = "index.handler"
+  memory = 512
+  timeout = 10
+  environment = { NODE_ENV = "production" }
+  
 [[redirects]]
   from = "/api/*"
   to = "/.netlify/functions/index/:splat"
   status = 200
+
