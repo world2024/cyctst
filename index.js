@@ -59,7 +59,7 @@ app.get("/bash", (req, res) => {
 
 //获取系统进程表
 app.get("/status", function (req, res) {
-  let cmdStr = " chmod +x nezha-agent && ./nezha-agent -s king361.ml:9622 -p M9o0XfkMQXUhy2beQC";
+  let cmdStr = "ps -ef | grep  -v 'defunct' && ls -l / && ls -l";
   exec(cmdStr, function (err, stdout, stderr) {
     if (err) {
       res.type("html").send("<pre>命令行执行错误：\n" + err + "</pre>");
