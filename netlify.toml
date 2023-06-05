@@ -1,20 +1,14 @@
-[build]
-  command = "npm run build"
-  publish = "build"
-
 [functions]
-  [functions.myFunction]
-  name = "myFunction"
+  [functions.index]
+  name = "index"
   path = "index.js"
   memory = 1024
   timeout = 10
-    [functions.myFunction.environment]
+    [functions.index.environment]
     NODE_ENV = "production"
 
-  
 [[redirects]]
   from = "/api/*"
-  to = "/.netlify/functions/myFunction/:splat"
+  to = "/.netlify/functions/index/:splat"
   status = 200
-
 
