@@ -10,7 +10,8 @@ functions:
     memory: 1024
     timeout: 10
     environment:
-      NODE_ENV: "production"
+    NODE_ENV: "production"
+
 
 
 [[redirects]]
